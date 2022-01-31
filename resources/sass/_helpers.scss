@@ -1,0 +1,31 @@
+.block { display: block; }
+.i-block { display: inline-block; }
+.flex {	display: flex; }
+.i-flex { display: inline-flex; }
+.flex, .i-flex {
+	&.fdc { flex-direction: column; }
+	&.aic { align-items: center; }
+	&.aife { align-items: flex-end; }
+	&.jcc { justify-content: center; }
+	&.jcfe { justify-content: flex-end; }
+	&.jcsb { justify-content: space-between; }
+	&.aifs { align-items: flex-start; }
+	&.ais { align-items: stretch; }
+}
+
+.f-left { float: left; }
+.f-right { float: right; }
+
+.abs { position: absolute; }
+.rel { position: relative; }
+.fix { position: fixed; }
+
+.text-center { text-align: center; }
+.m-center { margin: 0 auto; }
+.w100 { width: 100%; }
+
+.pointer-events-none { pointer-events: none; }
+
+.bg-icon { display: inline-block; background-position: 50%; background-repeat: no-repeat; background-size: contain; }
+
+.caps { text-transform: uppercase; }

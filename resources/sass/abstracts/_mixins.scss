@@ -1,0 +1,30 @@
+@mixin bg-image($size: contain, $pos: 50%) {
+  background-position: $pos;
+  background-repeat: no-repeat;
+  background-size: $size;
+}
+
+@mixin pseudo(
+  $type: before,
+  $content: '',
+  $pos: absolute,
+  $display: block
+) {
+  &::#{$type} {
+    content: $content;
+    position: $pos;
+    display: $display;
+    @content;
+  }
+}
+
+@mixin hover(
+  $prop: all,
+  $speed: .3s,
+  $animation-type: ease-in-out
+) {
+  transition: $prop $speed $animation-type;
+  &:hover {
+    @content;
+  }
+}

@@ -1,0 +1,12 @@
+"indent-width": false
+"line-end-style": false
+"id-class-style": "dash"
+"line-no-trailing-whitespace": false
+"attr-req-value": false
+"attr-bans": [
+  "align",
+  "background",
+  "border",
+  "scrolling",
+  "width"
+]
