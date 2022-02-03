@@ -24,6 +24,9 @@ mix.copyDirectory('resources/img', 'public/img')
 if (!mix.inProduction()) {
   mix.webpackConfig({
     devtool: 'source-map'
-  })
-  mix.sourceMaps()
+  }).browserSync({
+    browser: 'chrome',
+    watch: true,
+    server: { baseDir: 'public' }
+  }).sourceMaps()
 }
