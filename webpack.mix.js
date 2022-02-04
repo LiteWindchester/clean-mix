@@ -12,10 +12,9 @@ mix
   .sass('resources/sass/app.scss', 'public/css')
   .ejs('resources/views', 'public', {}, {
     ext: '.html',
-    base: 'resources/views',
     partials: 'resources/views/partials'
   })
-// .version()
+  // .version()
 
 mix.copyDirectory('resources/img', 'public/img')
 
@@ -24,9 +23,12 @@ mix.copyDirectory('resources/img', 'public/img')
 if (!mix.inProduction()) {
   mix.webpackConfig({
     devtool: 'source-map'
-  }).browserSync({
-    browser: 'chrome',
+  })
+  mix.browserSync({
+    // browser: 'opera',
+    open: false, // open browser on start?
     watch: true,
-    server: { baseDir: 'public' }
-  }).sourceMaps()
+    server: './public',
+  })
+  mix.sourceMaps()
 }
