@@ -1,8 +1,7 @@
 {
   "name": "clean-mix",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "dev": "npm run development",
     "development": "mix",
@@ -11,11 +10,9 @@
     "prod": "npm run production",
     "production": "mix --production"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.27.7",
+    "browser-sync-webpack-plugin": "^2.3.0",
     "cross-env": "^7.0.3",
     "laravel-mix": "^6.0.41",
     "laravel-mix-ejs": "^1.1.3",

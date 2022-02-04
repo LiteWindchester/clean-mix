@@ -4,8 +4,17 @@ require('laravel-mix-ejs')
 mix.setPublicPath('public')
 
 
-// disable system notifications
-mix.disableNotifications()
+// disable success notifications, notify only on errors
+mix.disableSuccessNotifications()
+
+mix.copyDirectory('resources/img', 'public/img')
+
+mix.options({
+  fileLoaderDirs: {
+    images: 'img',
+    fonts: 'fonts'
+  }
+})
 
 mix
   .js('resources/js/app.js', 'public/js')
@@ -14,9 +23,7 @@ mix
     ext: '.html',
     partials: 'resources/views/partials'
   })
-  // .version()
-
-mix.copyDirectory('resources/img', 'public/img')
+  .version()
 
 
 // If in development mode - enable sourcemaps
